@@ -4,7 +4,9 @@ cmd="test/test"
 read -r -d '' EXP <<-'EOE' || true
 stdin is a terminal
 stdout is a terminal
+-->break<--
 stdout is a terminal
+-->break<--
 stdin is a terminal
 EOE
 
@@ -17,4 +19,6 @@ test_out() {
   diff <(echo "$EXP") <(echo "$ACT")
 }
 
-run "$cmd; echo | $cmd; $cmd | head" | test_out
+lb="echo '-->break<--'"
+
+run "$cmd; $lb; echo | $cmd; $lb; $cmd | head" | test_out
