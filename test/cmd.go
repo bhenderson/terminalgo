@@ -10,7 +10,7 @@ func main() {
 	if t.IsTerminal(os.Stdin.Fd()) {
 		fmt.Println("stdin is a terminal")
 	}
-	if t.IsTerminal(os.Stdout.Fd()) {
+	if t.IsTerminal(1) {
 		fmt.Println("stdout is a terminal")
 	}
 }

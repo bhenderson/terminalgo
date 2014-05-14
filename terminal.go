@@ -1,13 +1,13 @@
 // copied from code.google.com/p/go.crypto/ssh/terminal
 
+// +build darwin freebsd linux netbsd openbsd
+
 package terminalgo
 
 import (
 	"syscall"
 	"unsafe"
 )
-
-const ioctlReadTermios = syscall.TCGETS
 
 // IsTerminal returns true if the given file descriptor is a terminal.
 func IsTerminal(fd uintptr) bool {
