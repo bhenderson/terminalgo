@@ -3,13 +3,14 @@ package main
 import (
 	"fmt"
 	t "github.com/bhenderson/terminal"
+	"os"
 )
 
 func main() {
-	if t.IsTerminal(0) {
+	if t.IsTerminal(os.Stdin.Fd()) {
 		fmt.Println("stdin is a terminal")
 	}
-	if t.IsTerminal(1) {
+	if t.IsTerminal(os.Stdout.Fd()) {
 		fmt.Println("stdout is a terminal")
 	}
 }
