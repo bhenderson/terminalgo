@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	t "github.com/bhenderson/terminal"
+	t "github.com/bhenderson/terminalgo"
 	"os"
 )
 

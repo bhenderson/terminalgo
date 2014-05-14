@@ -1,6 +1,6 @@
 // copied from code.google.com/p/go.crypto/ssh/terminal
 
-package terminal
+package terminalgo
 
 import (
 	"syscall"
